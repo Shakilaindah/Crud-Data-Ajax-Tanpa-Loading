@@ -17,7 +17,8 @@
         $prepare1->execute();
         echo $query;
     } else {
-        $query = "UPDATE `tbl_siswa` SET `nama_siswa` = ?, `alamat` = ?, `jurusan` = ?, `jenis_kelamin` = ?, `tgl_masuk` =? WHERE `tbl_siswa`.`id` = ?";
+        $query = "UPDATE `tbl_siswa` SET `nama_siswa` = ?, `alamat` = ?, `jurusan` = ?, `jenis_kelamin` = ?, `tgl_masuk` =? 
+        WHERE `tbl_siswa`.`id` = ?";
         $prepare1 = $db1->prepare($query);
         $prepare1->bind_param("sssssi", $nama_siswa, $alamat, $jurusan, $jkl, $tgl_masuk, $id);
         $prepare1->execute();
